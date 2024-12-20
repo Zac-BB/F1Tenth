@@ -19,8 +19,7 @@ class Talker : public rclcpp::Node
         message.header.frame_id = "base_link";
         message.drive.speed = this->get_parameter("v").as_double();    
         message.drive.steering_angle = this->get_parameter("d").as_double();  
-        RCLCPP_INFO(this->get_logger(), "Publishing: speed=%f, steering_angle=%f",
-                    message.drive.speed, message.drive.steering_angle);
+        // RCLCPP_INFO(this->get_logger(), "Publishing: speed=%f, steering_angle=%f",message.drive.speed, message.drive.steering_angle);
         publisher_->publish(message);
     }
   public:

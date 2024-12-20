@@ -27,8 +27,7 @@ class Relay : public rclcpp::Node
         message.header.frame_id = "base_link";
         message.drive.speed = msg->drive.speed * 3.0;    
         message.drive.steering_angle = msg->drive.steering_angle * 3.0;  
-        RCLCPP_INFO(this->get_logger(), "Publishing: speed=%f, steering_angle=%f",
-                    message.drive.speed, message.drive.steering_angle);
+        // RCLCPP_INFO(this->get_logger(), "Publishing: speed=%f, steering_angle=%f",message.drive.speed, message.drive.steering_angle);
         publisher_->publish(message);
     }
     
