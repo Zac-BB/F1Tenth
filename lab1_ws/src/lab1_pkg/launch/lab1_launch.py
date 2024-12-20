@@ -6,16 +6,16 @@ def generate_launch_description():
         Node(
             package='lab1_pkg',
             executable='talker',
-            name='talkerNode',
+            name='talker',
             parameters=[
-                {"v" : 3.0},
-                {"d" : 5.0}
+                {"v" : 1.0},
+                {"d" : 5.5}
             ]
         ),
         Node(
             package='lab1_pkg',
             executable='relay',
-            name='relayNode'
+            name='relay'
         ),
         
     ])
